@@ -9,7 +9,13 @@ Lita Dotenv Config Loader
 [![Docs][docs-rubydoc-svg]][docs-rubydoc-link]
 [![License][license-svg]][license-link]
 
-`lita_dotenv` is designed to allow storing an entire [Lita bot](https://www.lita.io/) config in an `.env` file. The `lita_config.rb` file should be as simple as:
+`lita_dotenv` is designed to allow storing an entire [Lita bot](https://www.lita.io/) config in an `.env` file including the following:
+
+* map environment variables to Lita config properties
+* coerce environment variable value types to Ruby types
+* load .env file if exists
+
+ The `lita_config.rb` file should be as simple as:
 
 ```ruby
 require 'lita_dotenv'
@@ -60,6 +66,10 @@ Lita.configure do |config|
   config = LitaDotenv.new(config).config
 end
 ```
+
+## To Do
+
+* Map config hash key values, e.g. `config.redis[:url]`
 
 ## Change Log
 
