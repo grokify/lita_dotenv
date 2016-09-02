@@ -43,9 +43,13 @@ LITA_ROBOT_logLevel__TYPESYM=info  # config.robot.log_level = :info
 
 ### lita_config.rb
 
+In the ideal case, the `lita_config.rb` file should be as simple as:
+
 ```ruby
+require 'lita_dotenv'
+
 Lita.configure do |config|
-  config = Lita::Extensions::DotenvConfig.new(config).config
+  config = LitaDotenv.new(config).config
 end
 ```
 
