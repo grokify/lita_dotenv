@@ -22,7 +22,7 @@ module LitaDotenv
             val = val.to_sym
           elsif type == 'typebool'
             val = val.downcase == 'true' ? true : false
-          elsif type == 'typeint' && type =~ /^s*[0-9]+\s*$/
+          elsif type == 'typeint' && val =~ /^\s*[0-9]+\s*$/
             val = val.to_i
           elsif type == 'typejson'
             val = MultiJson.decode val

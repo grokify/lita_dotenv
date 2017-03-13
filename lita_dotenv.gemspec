@@ -1,7 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name          = 'lita_dotenv'
-  spec.date          = '2016-09-02'
-  spec.version       = '0.0.2'
+  spec.date          = '2017-03-13'
+  spec.version       = '0.0.3'
   spec.authors       = ['John Wang']
   spec.email         = ['johncwang@gmail.com']
   spec.description   = %q{A Lita .env config loader.}
